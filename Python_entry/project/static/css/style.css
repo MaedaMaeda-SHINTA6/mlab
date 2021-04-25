@@ -1,0 +1,15 @@
+.jumbotron { 
+    background:url(../img/todo-top.png) center no-repeat; 
+    background-size: contain;
+}
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square-content {
+    display: block;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+}

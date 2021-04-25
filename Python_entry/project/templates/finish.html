@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <label class="text-success font-weight-bold" for="task">カテゴリ</label>
+        </div>
+        <div class='col-sm-6'>
+            <label class="text-primary font-weight-bold" for="task">{{ todo.category }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-sm-6'>
+            <label class="text-success font-weight-bold" for="name">タスク名</label>
+        </div>
+        <div class='col-sm-6'>
+            <label class="text-primary font-weight-bold" for="name">{{ todo.name }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-sm-6'>
+            <label class="text-success font-weight-bold" for="date">対応日付</label>
+        </div>
+        <div class='col-sm-6'>
+            <label class="text-primary font-weight-bold" for="date">{{ todo.date }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-sm-6'>
+            <label class="text-success font-weight-bold" for="etc">備考</label>
+        </div>
+        <div class='col-sm-6'>
+            <label class="text-primary font-weight-bold" for="etc">{{ todo.note }}</label>
+        </div>
+    </div>
+    <br>
+    <form action="/fin/{{todo.count}}" method="post">
+        <div class="row">
+            <div class='col-sm-2'>
+                <label class="text-success font-weight-bold" for="report">完了報告</label>
+            </div>
+            <div class='col-sm-8'>
+                <textarea class="form-control" name="report" rows="6"></textarea>
+            </div>
+            <div class='col-sm-2'>
+                <button class="btn btn-outline-success btn-block" type="submit">完了</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

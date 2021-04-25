@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Mlab Sample</title>
+        <script type="text/javascript" src="/static/js/jquery-3.2.1.slim.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="/static/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+        <!-- bootstrap-datepickerを読み込む -->
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-datetimepicker.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-datetimepicker.min.css">
+        <!-- スタイルシート -->
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <div class="container">
+                </div>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <!-- bootstrap-datepickerを読み込む -->
+        <script type="text/javascript" src="/static/js/moment.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap-datetimepicker.min.js"></script>
+        <!-- bootstrap-datepickerのjavascriptコード -->
+        <script>
+            $(function () {
+                $('#date').datetimepicker({
+                    dayViewHeaderFormat: 'YYYY年 MMMM',
+                    tooltips: {
+                        close: '閉じる',
+                        selectMonth: '月を選択',
+                        prevMonth: '前月',
+                        nextMonth: '次月',
+                        selectYear: '年を選択',
+                        prevYear: '前年',
+                        nextYear: '次年',
+                        selectTime: '時間を選択',
+                        selectDate: '日付を選択',
+                        prevDecade: '前期間',
+                        nextDecade: '次期間',
+                        selectDecade: '期間を選択',
+                        prevCentury: '前世紀',
+                        nextCentury: '次世紀'
+                    },
+                    format: 'YYYY/MM/DD',
+                    locale: 'ja',
+                    showClose: true
+                });
+            });
+        </script>
+    </body>
+</html>
